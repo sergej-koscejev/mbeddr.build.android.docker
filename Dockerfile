@@ -29,3 +29,6 @@ COPY cmake/package.xml ${ANDROID_CMAKE_HOME}/
 
 # Use Java 8 instead of the default Java 7
 RUN update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+# Doxygen & Graphviz
+RUN apt-get update && apt-get install -y doxygen graphviz
