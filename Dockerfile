@@ -1,10 +1,10 @@
 FROM mbeddr/mbeddr.build.docker
 MAINTAINER Sergej Koscejev <sergej@koscejev.cz>
 
-ENV ANDROID_TOOLS_VERSION 25.2.3
+ENV ANDROID_TOOLS_VERSION 26.1.1
 ENV ANDROID_HOME /opt/android
 
-ENV ANDROID_NDK_VERSION 13b
+ENV ANDROID_NDK_VERSION 16b
 ENV ANDROID_NDK_HOME /opt/android-ndk
 
 # SDK
