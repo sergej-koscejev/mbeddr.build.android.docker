@@ -1,14 +1,15 @@
 FROM mbeddr/mbeddr.build.docker
 MAINTAINER Sergej Koscejev <sergej@koscejev.cz>
 
-ENV ANDROID_TOOLS_VERSION 26.1.1
+# ver 26.1.1
+ENV ANDROID_TOOLS_VERSION_ID 4333796 
 ENV ANDROID_HOME /opt/android
 
 ENV ANDROID_NDK_VERSION 16b
 ENV ANDROID_NDK_HOME /opt/android-ndk
 
 # SDK
-RUN curl --silent --show-error --output /tmp/tools.zip https://dl.google.com/android/repository/tools_r${ANDROID_TOOLS_VERSION}-linux.zip && \
+RUN curl --silent --show-error --output /tmp/tools.zip https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_TOOLS_VERSION_ID}.zip && \
 	unzip -q /tmp/tools.zip -d ${ANDROID_HOME} && rm /tmp/tools.zip
 
 # Android Licenses
